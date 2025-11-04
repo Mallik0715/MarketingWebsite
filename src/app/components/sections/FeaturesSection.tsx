@@ -1529,15 +1529,6 @@ const features = [
     image: '/images/image.png',
     benefits: ['Sales analytics', 'Peak hour insights', 'Menu performance']
   },
-  {
-    icon: Shield,
-    title: 'Multi-Location Control',
-    description:
-      'Manage all your venues from one unified, secure dashboard. Scale effortlessly across multiple locations.',
-    gradient: 'from-sky-500 to-blue-600',
-    image: '/images/image.png',
-    benefits: ['Centralized control', 'Role-based access', 'Cross-location reports']
-  }
 ]
 
 // ✅ Updated ImageCard: two images side-by-side even on mobile
