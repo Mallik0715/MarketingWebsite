@@ -58,10 +58,10 @@ export default function Home() {
   const offset = circumference - (circumference * scrollProgress) / 100;
 
   return (
-    <div className="min-h-screen overflow-hidden bg-white">
+    <div className="min-h-screen overflow-hidden  bg-white">
       <Header />
 
-      <section id="hero" className="scroll-mt-16">
+      <section id="hero" className="scroll-mt-20 mt-5">
         <HeroSection />
       </section>
       <section id='services' className="scroll-mt-16">
