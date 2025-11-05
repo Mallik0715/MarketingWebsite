@@ -322,7 +322,7 @@ const features = [
     description:
       'Enable contactless dining with instant digital menus at every table. Customers scan, browse, and order in seconds.',
     gradient: 'from-blue-500 to-sky-500',
-    image: '/images/image1.png',
+    image: '/images/image88.png',
     benefits: ['Instant menu access', 'Contactless ordering', 'Real-time updates']
   },
   {
@@ -376,7 +376,7 @@ const features = [
     description:
       'Gain actionable insights on sales trends, peak hours, and top items. Make data-driven decisions that boost profits.',
     gradient: 'from-blue-500 to-sky-600',
-    image: '/images/image.png',
+    image: '/images/image99.png',
     benefits: ['Sales analytics', 'Peak hour insights', 'Menu performance']
   },
 ]
