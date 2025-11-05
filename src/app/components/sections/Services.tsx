@@ -289,9 +289,8 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-50 border border-blue-200 text-blue-700 rounded-full text-sm font-semibold mb-6 shadow-sm">
-            <span className="text-lg">🍽️</span>
-            <span>Our Services</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-50 border border-blue-200 text-blue-600 rounded-full text-sm font-semibold mb-6 shadow-sm">
+            <h2 className='text-2xl '>Our Services</h2>
           </div>
 
           {/* Title */}

@@ -6,11 +6,11 @@ import Features from './components/sections/FeaturesSection'
 import About from './components/sections/About'
 import Pricing from './components/sections/Pricing'
 import Testimonials from './components/sections/Testimonals'
-import {  Contact } from 'lucide-react'
 import Demo from './components/sections/Demo'
 import ServicesSection from './components/sections/Services';
 import { useEffect, useState } from 'react';
 import FAQSection from './components/sections/Faqs'
+
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -70,7 +70,7 @@ export default function Home() {
      
       <section id="features" className="scroll-mt-16">
         <Features />
-      </section>
+      </section>  
 
       <section id="how-it-works" className="scroll-mt-16">
         <Demo />
@@ -88,9 +88,7 @@ export default function Home() {
         <Testimonials />
       </section>
 
-      <section id="contact" className="scroll-mt-16">
-        <Contact />
-      </section>
+   
       <section id="faqs" className="scroll-mt-16">
         <FAQSection />
       </section>
@@ -164,3 +162,4 @@ export default function Home() {
     </div>
   )
 }
+
