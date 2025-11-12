@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin} from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-500 to-emerald-600">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-green-500 to-emerald-600">
       <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Ready to Transform Your Restaurant?

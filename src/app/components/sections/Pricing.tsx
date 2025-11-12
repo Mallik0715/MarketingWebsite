@@ -1,5 +1,4 @@
 
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -14,30 +13,18 @@ interface Plan {
   icon: React.ReactNode
   popular: boolean
   features: string[]
+  yearlyPrice?: string // Added optional yearly price
 }
 
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
 
-  const parsePrice = (priceStr: string): number =>
-    parseFloat(priceStr.replace(/[₹,]/g, ''))
-
-  const formatPrice = (num: number): string =>
-    `₹${num.toLocaleString('en-IN')}`
-
-  const getDisplayedPrice = (plan: Plan) => {
-    if (plan.price === 'Custom') return 'Custom'
-    const monthlyValue = parsePrice(plan.price)
-    if (billingCycle === 'monthly') return plan.price
-    const yearly = Math.round(monthlyValue * 12 * 0.8)
-    return formatPrice(yearly)
-  }
-
-  // 🔹 Updated plans with Marinate Packages
+  // 🔹 Updated plans with fixed yearly pricing
   const plans: Plan[] = [
     {
-      name: 'Marinate Menu (Basic)',
-      price: '₹2,999',
+      name: 'Marinate Menu',
+      price: '₹799',
+      yearlyPrice: '₹6,999',
       period: 'month',
       description: 'Ideal for restaurants starting digital menus',
       icon: <Smartphone className="w-6 h-6" />,
@@ -55,8 +42,9 @@ export default function Pricing() {
       ]
     },
     {
-      name: 'Marinate Dine (Professional)',
-      price: '₹7,999',
+      name: 'Marinate Dine',
+      price: '₹1,499',
+      yearlyPrice: '₹14,999',
       period: 'month',
       description: 'Perfect for dine-in restaurants looking for automation',
       icon: <Star className="w-6 h-6 fill-current" />,
@@ -78,7 +66,7 @@ export default function Pricing() {
       ]
     },
     {
-      name: 'Marinate 360 (Advanced - Full Suite)',
+      name: 'Marinate 360',
       price: 'Custom',
       period: '',
       description: 'The complete restaurant business management suite',
@@ -97,6 +85,14 @@ export default function Pricing() {
       ]
     }
   ]
+
+  const getDisplayedPrice = (plan: Plan) => {
+    if (plan.price === 'Custom') return 'Custom'
+    if (billingCycle === 'yearly' && plan.yearlyPrice) {
+      return plan.yearlyPrice
+    }
+    return plan.price
+  }
 
   const container = {
     hidden: { opacity: 0 },
@@ -221,15 +217,13 @@ export default function Pricing() {
                   </span>
                   {plan.price !== 'Custom' && (
                     <span className="ml-1 text-lg text-gray-600">
-                      {billingCycle === 'monthly'
-                        ? `/${plan.period}`
-                        : '/year'}
+                      {billingCycle === 'monthly' ? `/${plan.period}` : '/year'}
                     </span>
                   )}
                 </div>
                 {billingCycle === 'yearly' && plan.price !== 'Custom' && (
                   <div className="mt-2 text-xs text-blue-600 font-medium">
-                    Save 20% annually
+                    Save with annual billing
                   </div>
                 )}
               </div>
