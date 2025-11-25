@@ -20,7 +20,7 @@ const Footer = () => {
     <>
       <footer
         id="footer"
-        className="relative bg-linear-to-b from-black via-gray-900 to-black text-gray-400 overflow-hidden"
+        className="relative bg-linear-to-b from-red-100 via-gray-900 to-black text-gray-400 overflow-hidden"
       >
         {/* Animated gradient orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
